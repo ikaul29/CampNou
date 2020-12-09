@@ -48,7 +48,7 @@ app.use(express.static(path.join(__dirname, 'public')))
 app.use(mongoSanitize({
     replaceWith: '_'
 }))
-const secret = process.env.SECRET || 'thisshouldbeabettersecret!';
+const secret = process.env.SECRET || 'ishaan';
 
 const store = new MongoDBStore({
     url: dbUrl,
@@ -115,7 +115,7 @@ app.use(
                 "'self'",
                 "blob:",
                 "data:",
-                "https://res.cloudinary.com/douqbebwk/", //SHOULD MATCH YOUR CLOUDINARY ACCOUNT! 
+                "https://res.cloudinary.com/dyzh5truo/", //SHOULD MATCH YOUR CLOUDINARY ACCOUNT! 
                 "https://images.unsplash.com",
             ],
             fontSrc: ["'self'", ...fontSrcUrls],
